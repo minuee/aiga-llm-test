@@ -16,10 +16,10 @@ db_database = os.environ['MYSQL_DATABASE']
 db_post = os.environ['MYSQL_PORT']
 
 
-print('\n db_host:', db_host)
-print('\n db_hodb_userst:', db_user)
-print('\n db_pwd:', db_pwd)
-print('\n db_database:', db_database)
+# print('\n db_host:', db_host)
+# print('\n db_hodb_userst:', db_user)
+# print('\n db_pwd:', db_pwd)
+# print('\n db_database:', db_database)
 
 conn = pymysql.connect(host=db_host, user=db_user, password=db_pwd, db=db_database, charset='utf8')
 cur = conn.cursor()
@@ -27,6 +27,9 @@ cur = conn.cursor()
 SOURCE_ID = os.getenv('SOURCE_ID')
 
 def saveEvaluation(sns, doctor_eval):
+
+    print('\n', "sns length:\n", len(sns))
+    print('\n', "doctor_eval length:\n", len(doctor_eval))
     try: 
         review_id         = int(sns["review_id"])
         # contents    = sns["contents"]
@@ -139,11 +142,12 @@ def saveEvaluation(sns, doctor_eval):
                     ]
                     )
         for result in cur.fetchall():
-            print(result)
+            print('saveEvaluation')
 
-        print('저장 review_id:', sns["review_id"])
+        # print('저장 review_id:', sns["review_id"])
         
         conn.commit()
     except Exception as e:
             msg = f"Error, review_id({sns['review_id']}), in saveEvaluation: {e}"
+            print('saveEvaluation error', e)
             log.LogTextOut(msg)

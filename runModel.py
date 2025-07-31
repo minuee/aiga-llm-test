@@ -29,6 +29,8 @@ from database import saveEvaluation
 load_dotenv()
 
 SOURCE_ID = os.getenv('SOURCE_ID')
+AWS_REGION_NAME = os.getenv('AWS_REGION_NAME')
+AWS_MODEL_ID = os.getenv('AWS_MODEL_ID')
 
 def getFewShot():
     fewshot = f'./fewshot/{SOURCE_ID}/fewshot.json'
@@ -68,10 +70,24 @@ parser = StrOutputParser()
 # LLM 모델 선택
 llm = ChatBedrock( #Bedrock llm 클라이언트 생성
     # credentials_profile_name=os.environ.get("BWB_PROFILE_NAME"), #AWS 자격 증명에 사용할 프로필 이름 설정 (기본값이 아닌 경우)
-    region_name="us-east-1", #리전 설정 (기본값이 아닌 경우)
+    region_name=AWS_REGION_NAME, ##  "us-east-1", #리전 설정 (기본값이 아닌 경우)
     model_kwargs=dict(temperature=0),
     # endpoint_url=os.environ.get("BWB_ENDPOINT_URL"), #엔드포인트 URL 설정 (필요한 경우)
-    model_id="anthropic.claude-3-5-sonnet-20240620-v1:0" #파운데이션 모델 설정
+    model_id=AWS_MODEL_ID  #"anthropic.claude-3-5-sonnet-20240620-v1:0" #파운데이션 모델 설정
+)
+llm2 = ChatBedrock( #Bedrock llm 클라이언트 생성
+    # credentials_profile_name=os.environ.get("BWB_PROFILE_NAME"), #AWS 자격 증명에 사용할 프로필 이름 설정 (기본값이 아닌 경우)
+    region_name=AWS_REGION_NAME, ##  "us-east-1", #리전 설정 (기본값이 아닌 경우)
+    model_kwargs =  {
+        #"max_tokens_to_sample": 2048,
+        "temperature": 0.0,
+        "top_k": 250,
+        "top_p": 1,
+        "max_tokens": 500
+    },
+    # max_tokens는 출력값인 output의 미래 토큰의 맥스를 정하는 값이다 
+    # endpoint_url=os.environ.get("BWB_ENDPOINT_URL"), #엔드포인트 URL 설정 (필요한 경우)
+    model_id=AWS_MODEL_ID  #"anthropic.claude-3-5-sonnet-20240620-v1:0" #파운데이션 모델 설정
 )
 # llm = AzureChatOpenAI(
 #     # deployment_name="gpt-4o",
@@ -86,10 +102,16 @@ def checkLLMResult(result):
     if stop_reason != 'end_turn':
         # print('stop_reason:', stop_reason)
         raise Exception("LLM 결과에서 에러가 감지되었습니다.", 'stop_reason:', stop_reason)
+    
+    if hasattr(result, 'usage_metadata') and result.usage_metadata:
+        input_tokens = result.usage_metadata.get('input_tokens', 0)
+        output_tokens = result.usage_metadata.get('output_tokens', 0)
+        print(f"| Tokens: Input={input_tokens}, Output={output_tokens}", end="", flush=True)
+
     return result
 
 # Chaining
-chain = final_prompt | llm | checkLLMResult | parser
+chain = final_prompt | llm2 | checkLLMResult | parser
 
 def extract_professor_info(review):
     try:
@@ -99,11 +121,11 @@ def extract_professor_info(review):
         
         # 일부 특수문자가 파싱 오류로 발생하여, 삭제
         # new_str = re.sub(r"[^\uAC00-\uD7A30-9a-zA-Z~!@#$%&*()-=,.\s]", "", contents)
-        print('\n final_prompt:', final_prompt)
-        print('\n llm:', llm)
-        print('\n Chaining:', checkLLMResult)
-        print('\n parser:', parser)
-        print('\n review_id:', review['review_id'], end="")
+        # print('\n final_prompt:', final_prompt)
+        # print('\n llm:', llm)
+        # print('\n Chaining:', checkLLMResult)
+        # print('\n parser:', parser)
+        #print('\n review_id:', review['review_id'], end="")
 
         input = {
             "articleNo": review['review_id'],
@@ -117,7 +139,7 @@ def extract_professor_info(review):
             "systemMessage": systemMessage,
             "input": input
         })                              
-        print(', extract_professor_info result: ', result, end='\n')
+        # print(', extract_professor_info result: ', result, end='\n')
         return result
     except Exception as e:
         msg = f"Error, review_id({review['review_id']}), extract_professor_info: {e}"
@@ -130,7 +152,7 @@ def evaluateDoctor(reviews):
     doctor_evals = []  
     for review in reviews:
         result = extract_professor_info(review)
-        print("evaluateDoctor result:", result)
+        # print("evaluateDoctor result:", result)
         # LLM 수집의 오류가 발생하면, 바로 다음 진행
         if result is None:
             doctor_evals.append({'review_id': review['review_id']})
@@ -163,7 +185,8 @@ def evaluateDoctor(reviews):
             # doctor_evals.append({'review_id': review['review_id']})
             saveEvaluation(review, {"review_id": review['review_id']})
 
-    print('\n', "results:\n", results)
+    print('\n', "results length:\n", len(results))
+
 
     # 리스트를 JSON 파일로 저장
     with open("./result/result.json", "w", encoding='utf-8') as json_file:

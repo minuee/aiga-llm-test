@@ -1,0 +1,8 @@
+.env
+.env.production
+sns_recommand*
+userPrompt*
+result*
+logs/
+rsync_my_git.sh
+.venu

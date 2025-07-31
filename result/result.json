@@ -1,1 +1,834 @@
-[]
+[
+  {
+    "articleNo": 138,
+    "doctor_list": [
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "정연구",
+        "hospital": "강북삼성병원",
+        "Department": "신경외과",
+        "disease": "모야모야병",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      },
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "김민우",
+        "hospital": "강북삼성병원",
+        "Department": "신경외과",
+        "disease": "모야모야병",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 142,
+    "doctor_list": [
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "정연구",
+        "hospital": "강북삼성병원",
+        "Department": "신경외과",
+        "disease": "모야모야병",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      },
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "김민우",
+        "hospital": "강북삼성병원",
+        "Department": "신경외과",
+        "disease": "모야모야병",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      },
+      {
+        "type": "comment",
+        "writer": "@지현문-y8t",
+        "doctor": "정연구",
+        "hospital": "강북삼성병원",
+        "Department": "신경외과",
+        "disease": "모야모야병",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 1,
+            "confidence": 0.8,
+            "evidence": "모야모야 수술의 명의 !!!정연구 교수님 ...감사합니다❤"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 150,
+    "doctor_list": [
+      {
+        "type": "comment",
+        "writer": "@양지욱-y1g",
+        "doctor": "이관호",
+        "hospital": "강북삼성병원",
+        "Department": "외과",
+        "disease": "유방암",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "자세하고 따스한 설명으로 마음의 치료도 받고"
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 1,
+            "evidence": "완벽한 수술치료도 받았습니다. 감사합니다!!!"
+          },
+          "Clear concise explanation": {
+            "score": 1,
+            "confidence": 0.8,
+            "evidence": "자세하고 따스한 설명으로"
+          },
+          "Doctor recommendation": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "교수님은 제 생명의 은인입니다."
+          }
+        }
+      },
+      {
+        "type": "comment",
+        "writer": "@jinyu-t4c",
+        "doctor": "이관호",
+        "hospital": "강북삼성병원",
+        "Department": "외과",
+        "disease": "유방암",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 0.7,
+            "evidence": "어제 교수님께 수술받았어요 감사합니다"
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 153,
+    "doctor_list": [
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "김기윤",
+        "hospital": "강북삼성병원",
+        "Department": "위장관외과",
+        "disease": "비만",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 1,
+            "confidence": 0.8,
+            "evidence": "김기윤 교수가 명쾌하게 설명합니다."
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 154,
+    "doctor_list": [
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "김기윤",
+        "hospital": "강북삼성병원",
+        "Department": "위장관외과",
+        "disease": "위암",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 164,
+    "doctor_list": [
+      {
+        "type": "comment",
+        "writer": "@모-x1x",
+        "doctor": "김민",
+        "hospital": "강북삼성병원",
+        "Department": "순환기내과",
+        "disease": "부정맥",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "김민 교수님 진짜 친절하시고"
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 0.8,
+            "evidence": "정말 이분에게 진료 받으면서 많이 좋았는데"
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 1,
+            "confidence": 0.7,
+            "evidence": "서울로 옮겨야 해야하나 급 고민되네요"
+          }
+        }
+      },
+      {
+        "type": "comment",
+        "writer": "@akdma42",
+        "doctor": "김민",
+        "hospital": "강북삼성병원",
+        "Department": "순환기내과",
+        "disease": "부정맥",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 0.8,
+            "evidence": "교수님한테 시술받고 편하게 살고있습니당"
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 166,
+    "doctor_list": [
+      {
+        "type": "comment",
+        "writer": "@이향-h2f",
+        "doctor": "김보근",
+        "hospital": "강북삼성병원",
+        "Department": "호흡기내과",
+        "disease": "간질성 폐질환",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 1,
+            "confidence": 0.7,
+            "evidence": "교수님 감사합니다"
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 0.8,
+            "evidence": "오늘 남편 내시경수술 잘 해주셔서 지금회복 중입니다."
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 167,
+    "doctor_list": []
+  },
+  {
+    "articleNo": 169,
+    "doctor_list": [
+      {
+        "type": "comment",
+        "writer": "@user-mx6ve4xq6q",
+        "doctor": "손원",
+        "hospital": "강북삼성병원",
+        "Department": "소화기내과",
+        "disease": "바이러스 간염",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "친절하십니다."
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 0.7,
+            "evidence": "실력도 굉장히 좋으시고"
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 179,
+    "doctor_list": [
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "최한용",
+        "hospital": "강북삼성병원",
+        "Department": "비뇨의학과",
+        "disease": "전립선암",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 183,
+    "doctor_list": [
+      {
+        "type": "comment",
+        "writer": "@조인화-s2k",
+        "doctor": "권혜미",
+        "hospital": "강북삼성병원",
+        "Department": "내분비내과",
+        "disease": "갑상선 질환",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 1,
+            "confidence": 0.7,
+            "evidence": "설명잘들어습니다"
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 187,
+    "doctor_list": [
+      {
+        "type": "comment",
+        "writer": "@김미화-p6d",
+        "doctor": "안지현",
+        "hospital": "강북삼성병원",
+        "Department": "정형외과",
+        "disease": "무릎 질환",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "인공관절 반치환술을하고 필라테스 운동을하며 새로운 인생을살고있읍니다"
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 1,
+            "confidence": 0.7,
+            "evidence": "교수님너무  감사합니다"
+          }
+        }
+      },
+      {
+        "type": "comment",
+        "writer": "@KoreanGuy",
+        "doctor": "안지현",
+        "hospital": "강북삼성병원",
+        "Department": "정형외과",
+        "disease": "무릎 질환",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "환자를 생각하시는 참의사이십니다"
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 1,
+            "evidence": "너무 수술 잘되어"
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "감사히 생각하며 존경을 표합니다"
+          }
+        }
+      },
+      {
+        "type": "comment",
+        "writer": "@차형숙-l9j",
+        "doctor": "안지현",
+        "hospital": "강북삼성병원",
+        "Department": "정형외과",
+        "disease": "무릎 질환",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "일상생활 잘하고있습니다"
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 1,
+            "confidence": 0.9,
+            "evidence": "교수님을 만나 수술받은것이  너무나  큰행운이었네요"
+          }
+        }
+      },
+      {
+        "type": "comment",
+        "writer": "@bombom-vv7ix",
+        "doctor": "안지현",
+        "hospital": "강북삼성병원",
+        "Department": "정형외과",
+        "disease": "무릎 질환",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 1,
+            "confidence": 1,
+            "evidence": "지금 일상생활이나 운동도 다 잘하고 몇달전에 유럽여행 다니면서 이만보씩 걷게 되었는데 딱히 통증 없이 잘지내고 있습니다"
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 1,
+            "confidence": 0.7,
+            "evidence": "교수님 정말 감사합니다!"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 190,
+    "doctor_list": [
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "신영철",
+        "hospital": "건국대학교병원",
+        "Department": "정신건강의학과",
+        "disease": "",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      },
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "조성준",
+        "hospital": "건국대학교병원",
+        "Department": "정신건강의학과",
+        "disease": "",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 191,
+    "doctor_list": [
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "신영철",
+        "hospital": "건국대학교병원",
+        "Department": "정신건강의학과",
+        "disease": "",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      },
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "조성준",
+        "hospital": "건국대학교병원",
+        "Department": "정신건강의학과",
+        "disease": "",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      },
+      {
+        "type": "comment",
+        "writer": "@황황-s2g",
+        "doctor": "신영철",
+        "hospital": "건국대학교병원",
+        "Department": "정신건강의학과",
+        "disease": "",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 1,
+            "confidence": 0.7,
+            "evidence": "늘 좋은말씀 감사하고"
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 1,
+            "confidence": 0.8,
+            "evidence": "존경합니다"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 198,
+    "doctor_list": [
+      {
+        "type": "post",
+        "writer": "",
+        "doctor": "장한나",
+        "hospital": "강북삼성병원",
+        "Department": "내분비대사내과",
+        "disease": "부신기능저하증",
+        "evaluation": {
+          "Kindness and consideration": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Treatment satisfaction": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Clear concise explanation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          },
+          "Doctor recommendation": {
+            "score": 0,
+            "confidence": 0,
+            "evidence": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "articleNo": 202,
+    "doctor_list": []
+  },
+  {
+    "articleNo": 219,
+    "doctor_list": []
+  }
+]

@@ -58,7 +58,7 @@ def main():
         base_str = """WITH distinct_sns AS (
             SELECT *,
                 ROW_NUMBER() OVER (PARTITION BY title, articleDate ORDER BY review_id) AS rn
-            FROM patient_review where data_version_id = '%s' and source_id = '%s' and articleDate > '%s' 
+            FROM patient_review where data_version_id = '%s' and source_id = '%s' and articleDate > '%s'
         )
         SELECT  review_id, title, contents, comments, articleLink, articleNo, articleDate, source_id, snsName, snsUrl 
         FROM distinct_sns
