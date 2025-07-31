@@ -1,0 +1,75 @@
+import os
+from typing import List
+
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
+from langchain_core.pydantic_v1 import BaseModel, Field
+
+from langchain_experimental.llms.ollama_functions import OllamaFunctions
+from langchain_ollama import ChatOllama
+
+from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
+load_dotenv()
+
+LLM_MODEL = os.environ['LLM_MODEL']
+
+class Professor(BaseModel):
+    """한 명의 교수에 대한 정보"""
+    professor: str = Field(description="교수의 이름")
+    hospital: str = Field(description="교수가 소속된 병원")
+    disease: str = Field(description="교수가 담당하는 진료과(질환병)")
+
+# class Professors(BaseModel):
+#     """한 문장에 포함되어 있는 교수 정보들"""
+#     professors: List[Professor]
+
+# PydanticOutputParser 생성
+parser = PydanticOutputParser(pydantic_object=Professor)
+
+prompt = PromptTemplate.from_template(
+    """
+You are a helpful assistant. 
+Answer the user's question in Korean(한글), according to the given format, and do not provide additional explanations.
+
+QUESTION:
+{question}
+
+ARTICLE:
+{article}
+
+FORMAT:
+{format}
+"""
+)
+
+prompt = prompt.partial(format=parser.get_format_instructions())
+
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
+# llm = ChatOllama(model=LLM_MODEL, temperature=0)
+
+chain = prompt | llm
+
+def extract_person_hospital_info(text_list):
+    results = []
+    for text in text_list:
+        try:
+            # result = chain.invoke({"query": text + "이 문장에 포함되어 있는 교수를 최대 3명까지 찾아줘. 영어로 번역하지 말고, 그대로 한글로 알려줘"})
+            result = chain.invoke({
+              "article": text,
+              "question": "글 내용(Article)에서 교수 정보를 최대 3명까지 찾아 주세요",
+              # "question": "Please find professor information in the text",
+            })
+            results.append(result.content)
+        except Exception as e:
+            print(f"Error processing text: {text}, Error: {e}")
+    return results
+
+# Example usage
+texts = [
+  "저는 만71세 남자로 국내 최 장기 이식 생존자 처럼 ROTC 제대와 동시에 대기업에 입사하며 받은 신체검사에서 단백뇨가 검출되어 정밀 검사와 조직검사를 받고 앞으로 16년후에는 이식이나 투석을 받아야 됩니다 하는 경희의료원 김명재 교수의 진단 그대로 26세에에 진단후 41세에 바로 신장이식을 받아 현재 32년차로 Cr 1.46~1.5 BUN 28,사구체여과율 48 정도로 유지 하고 살고 있습니다 서울성모병원 양철우 교수님 진료를 받았으나 이제 곧 정년 하시므로 다른 교수님으로 주치의가 비뀌겠지요 그동안 아무 신장 관련 카페에 가입 하지 않고 지내다 신촌 세브란스병원에서 Cr이 1.69~1.77이 나온 일이 있었 기에 깜짝 놀라 관련 카페를 찾다가 여기 동호회가 신뢰 할 만하고 도움을 받을수 있는곳 임을 알고 가입하여 여러환우님들과 더불어 건강 생활 하고 활동도 열심히 하고 싶습니다. 환우님들 모두 지금보다 휠씬 나은 신약이나 의료 신기술이 개발되어 건강한 삶을 사시기 바랍니다 ~~~혹시 누군가 저의 도움이 필요 하신분이 있으시면 글로서 도와 드리고 저도 좋은글을 읽고 삶의 희망을 가지고 살고 싶습니다 국내 최장기 이식신의 기록이 42년 이라 하여 저도 희망이 있답니다 고생하는 한우 여러분 모두 힘 내세요!",
+  "안녕하세요,50대 남편이 최근 쭈그리고 앉아 일하고 볼링도 치고 하더니 고관절 통증이 심해 병원에 갔떠니,고관절무혈성괴사라고 하더라구요.,근데 어릴때부터 그쪽이 좋지않았고, 10여년전에도 나중에 수술해야한다고는 했대요,카페글을 읽어보니 다들 큰병원 가시는거같은데,,저희는 분당 나우에서 진료받았거든요,삼성병원은 9월9일에야 진료 예약이 되더라구요. 박찬우교수님으로요. 임교수님은 ARS 에서 아예 진료가 안된다며 박교수님으로 넘기더라구요.,근데 삼성병원은 9월 진료면 올해안에 수술이 가능할까요?,그리고 큰병원이라 비용부담도 되구요. 1000만원정도 든다고 본거같아요. 전체 재활병원 비용까지겠죠?,​,차라리 언제 할지 알수도 없고 여러모로 편의성이 있는 가까운 분당 나우서 당장 하는게 나을지,그래도 기다려서 삼성병원 가야는지 고민입니다.,겨울에 목발짚고 다니면 더 위험하지안하해서요.,일단 나우에서는 2주 약먹어보고 안되면 수술하자고 했거든요.,​,혹시 분당 나우에서 하신분 계실까요? 평촌 나우는 있는데 분당 나우는 후기가 없는 것 같아서요.,그리고 최근 삼성에서 하신분들 얼마나 기다리셨느지요?,​,조언부탁드립니다 감사합니다,안녕하세요50대 남편이 최근 쭈그리고 앉아 일하고 볼링도 치고 하더니 고관절 통증이 심해 병원에 갔떠니 고관절무혈성괴사라고 하더라구요. 근데 어릴때부터 그쪽이 좋지않았고, 10여년전에도 나중에 수술해야한다고는 했대요카페글을 읽어보니 다들 큰병원 가시는거같은데,저희는 분당 나우에서 진료받았거든요삼성병원은 9월9일에야 진료 예약이 되더라구요. 박찬우교수님으로요. 임교수님은 ARS 에서 아예 진료가 안된다며 박교수님으로 넘기더라구요.근데 삼성병원은 9월 진료면 올해안에 수술이 가능할까요?그리고 큰병원이라 비용부담도 되구요. 1000만원정도 든다고 본거같아요. 전체 재활병원 비용까지겠죠?​차라리 언제 할지 알수도 없고 여러모로 편의성이 있는 가까운 분당 나우서 당장 하는게 나을지그래도 기다려서 삼성병원 가야는지 고민입니다.겨울에 목발짚고 다니면 더 위험하지안하해서요.  일단 나우에서는 2주 약먹어보고 안되면 수술하자고 했거든요.​혹시 분당 나우에서 하신분 계실까요? 평촌 나우는 있는데 분당 나우는 후기가 없는 것 같아서요. 그리고 최근 삼성에서 하신분들 얼마나 기다리셨느지요?​조언부탁드립니다 감사합니다"
+]
+
+output = extract_person_hospital_info(texts)
+print(output)

@@ -1,0 +1,385 @@
+[	
+	{
+		"input": {
+			"articleNo": 1231,
+			"title": "김철수 교수의 간암 치료 최신 가이드",
+			"post": {
+				"writer": "",
+				"content": "서울대병원 김철수 교수가 간암 치료에 대한 최신 정보를 소개합니다. 간암 환자들에게 희망을 주는 최신 치료법과 그 효과에 대해 설명합니다."
+			},
+			"comments": [
+				{
+					"writer": "cancer_fighter",
+					"comment": "김철수 교수님 진짜 친절하시고 환자 한 명 한 명 세심하게 신경 써주시는 게 느껴져요. 진료 받으러 갔을 때 너무 따뜻하게 대해주셔서 감동 받았습니다."
+				},
+				{
+						"writer": "hopeful_heart",
+						"comment": "정말 놀라워요! 김철수 교수님께 치료받고 간암 상태가 많이 호전되었습니다. 결과에 정말 만족하고 있어요. 진짜 감사해요!"
+				},
+				{
+						"writer": "clear_mind",
+						"comment": "김 교수님 설명 듣고 있으면 정말 쉽게 이해가 돼요. 어려운 내용도 간단하게 설명해 주셔서 따라가기 편했습니다. 최고!"
+				},
+				{
+						"writer": "family_care",
+						"comment": "간암 치료로 고민 중이라면 김철수 교수님 완전 추천합니다. 제 가족도 여기서 치료받고 완치했어요. 정말 믿음 가는 분입니다."
+				}
+			]
+		},
+		"output": {
+			"articleNo": 1231,
+			"doctor_list": [
+				{
+					"type": "comment",
+					"writer": "cancer_fighter",
+					"doctor": "김철수",
+					"hospital": "서울대병원",
+					"Department": "내과",
+					"disease": "간암",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": 1,
+							"confidence": 1, 
+							"evidence": "세심하게 신경 써주시는 게 느껴져요. 너무 따뜻하게 대해주셔서 감동 받았습니다."
+						},
+						"Treatment satisfaction": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Clear concise explanation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Doctor recommendation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						}
+					}
+				},
+				{
+					"type": "comment",
+					"writer": "hopeful_heart",
+					"doctor": "김철수",
+					"hospital": "서울대병원",
+					"Department": "내과",
+					"disease": "간암",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Treatment satisfaction": {
+							"score": 1,
+							"confidence": 1, 
+							"evidence": "간암 상태가 많이 호전되었습니다."
+						},
+						"Clear concise explanation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Doctor recommendation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						}
+					}
+				},
+				{
+					"type": "comment",
+					"writer": "clear_mind",
+					"doctor": "김철수",
+					"hospital": "서울대병원",
+					"Department": "내과",
+					"disease": "간암",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Treatment satisfaction": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Clear concise explanation": {
+							"score": 1,
+							"confidence": 1, 
+							"evidence": "정말 쉽게 이해가 돼요. 간단하게 설명해 주셔서 따라가기 편했습니다. 최고!"
+						},
+						"Doctor recommendation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						}
+					}
+				},
+				{
+					"type": "comment",
+					"writer": "family_care",
+					"doctor": "김철수",
+					"hospital": "서울대병원",
+					"Department": "내과",
+					"disease": "간암",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Treatment satisfaction": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Clear concise explanation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Doctor recommendation": {
+							"score": 1,
+							"confidence": 1, 
+							"evidence": "김철수 교수님 완전 추천합니다."
+						}
+					}
+				}
+			]
+		}
+	},
+	{
+		"input": {
+			"articleNo": 1232,
+			"title": "이수정 교수의 피부과 치료",
+			"post": {
+				"writer": "",
+				"content": "서울의대병원 이수정 교수가 피부 질환에 대한 다양한 치료법과 그 효과에 대해 설명합니다."
+			},
+			"comments": [
+				{
+					"writer": "날으는 돼지",
+					"comment": "일전에 이수정 교수님이 유명하다고 해서 찾아갔는데, 설명이 좀 어려웠어요. 아토피 피부염에 대해 처음 듣는 용어들이 많아서 이해하기 힘들었습니다. 환자가 이해하기 쉽도록 설명해 주시면 좋겠어요."
+				},
+        {
+					"writer": "난머러스",
+					"comment": "몇 년전 치료 경험으로는 치료 결과가 생각보다 좋지 않아서 좀 아쉬웠어요. 기대가 컸었는데.."
+        },
+				{
+					"writer": "팬더",
+					"comment": "사랑합니다. 감사합니다."
+        }
+			]
+		},
+		"output": {
+			"articleNo": 1232,
+			"doctor_list":[
+				{
+					"type": "comment",
+					"writer": "날으는 돼지",
+					"doctor": "이수정",
+					"hospital": "서울의대병원",
+					"Department": "피부과",
+					"disease": "아토피 피부염",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": -1,
+							"confidence": 0.7, 
+							"evidence": "설명이 좀 어려웠어요. 처음 듣는 용어들이 많아서 이해하기 힘들었습니다."
+						},
+						"Treatment satisfaction": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Clear concise explanation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Doctor recommendation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						}
+					}
+				},
+				{
+					"type": "comment",
+					"writer": "난머러스",
+					"doctor": "이수정",
+					"hospital": "서울의대병원",
+					"Department": "피부과",
+					"disease": "아토피 피부염",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Treatment satisfaction": {
+							"score": -1,
+							"confidence": 0.8, 
+							"evidence": "치료 결과가 생각보다 좋지 않아서 좀 아쉬웠어요"
+						},
+						"Clear concise explanation": {
+							"score": 0,
+							"confidence": 0.0, 
+							"evidence": ""
+						},
+						"Doctor recommendation": {
+							"score": 0,
+							"confidence": 0.6, 
+							"evidence": ""
+						}
+					}
+				}
+			]
+		}
+	},
+	{
+		"input": {
+			"articleNo": 1234,
+			"title": "드디어 허리 통증에서 해방 된다!",
+			"post": {
+				"writer": "",
+				"content": "디스크 치료에 최근 동향과 구체적인 치료법 소개"
+			},
+			"comments": [
+				{
+					"writer": "허리디스크환자",
+					"comment": "몇 년 동안 허리디스크 때문에 고생하다가 드디어 ㅇㅇ병원 ㄴㄴ 교수님 덕분에 일상생활이 가능해졌어요! 처음 진료 때부터 꼼꼼하게 설명해주시고, 어려운 의학 용어 없이 쉽게 이해할 수 있도록 해주셔서 너무 감사했어요. 치료 과정이 힘들었지만, 교수님의 따뜻한 격려 덕분에 잘 버틸 수 있었고, 지금은 통증이 거의 사라져서 너무 행복합니다. ㅇㅇ병원 신경외과 ㄴㄴ 교수님, 정말 감사합니다!"
+				},
+				{
+					"writer": "아프지마",
+					"comment": "나도 ㄴㄴ 교수님 께 감사 인사드려요.~"
+				}
+			]
+		},
+		"output": {
+			"articleNo": 1234,
+			"doctor_list":[
+				{
+					"type": "comment",
+					"writer": "허리디스크환자",
+					"doctor": "ㄴㄴ",
+					"hospital": "ㅇㅇ병원",
+					"Department": "신경외과",
+					"disease": "허리디스크",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": 1,
+							"confidence": 0.9, 
+							"evidence": "처음 진료 때부터 꼼꼼하게 설명해주시고, 어려운 의학 용어 없이 쉽게 이해할 수 있도록 해주셔서 너무 감사했어요. 치료 과정이 힘들었지만, 교수님의 따뜻한 격려 덕분에 잘 버틸 수 있었고"
+						},
+						"Treatment satisfaction": {
+							"score": 1,
+							"confidence": 1, 
+							"evidence": "지금은 통증이 거의 사라져서 너무 행복합니다"
+						},
+						"Clear concise explanation": {
+							"score": 1,
+							"confidence": 1, 
+							"evidence": "처음 진료 때부터 꼼꼼하게 설명해주시고, 어려운 의학 용어 없이 쉽게 이해할 수 있도록 해주셔서 너무 감사했어요"
+						},
+						"Doctor recommendation": {
+							"score": 1,
+							"confidence": 0.7, 
+							"evidence": "ㅇㅇ병원 신경외과 ㄴㄴ 교수님, 정말 감사합니다!"
+						}
+					}
+				}
+			]
+		}
+	},
+	{
+		"input": {
+			"articleNo": 1235,
+			"title": "고지혈증 귀족만 걸리는 병? 풍족하게 먹고 마신 식습관 혈관에 흔적 남긴다! | 명의",
+			"post": {
+				"writer": "",
+				"content": "※ 이 영상은 2022년 12월 2일에 방송된 ＜명의 - 고지혈증, 당신의 LDL 수치는?＞의 일부입니다. 현대인의 만성질환을 부르는 주요 원인 중 하나인 고지혈증! 건강검진마다 오르락내리락하는 콜레스테롤 수치, 이 나이에 흔하다며 방치해도 괜찮을까요 혈압과 당뇨 수치는 외우고 있는 당신, 콜레스테롤 수치는 알고 계신가요? 흔하지만 제대로 알지 못하는 질병 고지혈증을 명의와 함께 극복해보자 ✔ 프로그램명 : 명의 - 고지혈증, 당신의 LDL 수치는? ✔ 방송 일자 : 2022년 12월 2일 #귀족 #고지혈증 #고지혈증예방 #고지혈증관리 #식단 #만성질환"
+			},
+			"comments": [
+				{
+					"writer": "추천하는환자",
+					"comment": "저는 다른 병원에서 강남○○병원 신경외과 김○○ 교수님께 진료받았는데, 매우 만족스러웠어요. 교수님이 진료 내내 아주 친절하셨고, 치료 결과도 확실하게 개선됐습니다. 저는 앞으로도 김○○ 교수님을 꾸준히 찾아뵐 예정입니다."
+				},
+				{
+					"writer": "다른의견",
+					"content": "저도 일자목으로 세브란스 신경외과 김ㅎㅈ 교수님께 진료받았는데, 사실 조금 아쉬웠어요. 교수님이 친절하긴 했지만, 진료 시간이 짧아서 배려를 느끼기는 어려웠어요. 치료 결과는 나아지긴 했지만 크게 만족스럽진 않았습니다. 설명도 너무 간단해서... 딱히 추천하기에는 조금 고민되는 부분이 있네요."
+				}
+			]
+		},
+		"output": {
+			"articleNo": 1235,
+			"doctor_list":[
+				{
+					"type": "comment",
+					"writer": "추천하는환자",
+					"doctor": "김○○",
+					"hospital": "강남○○병원",
+					"Department": "신경외과",
+					"disease": "고지혈증",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": 1,
+							"confidence": 0.9, 
+							"evidence": "교수님이 진료 내내 아주 친절하셨습니다."
+						},
+						"Treatment satisfaction": {
+							"score": 1,
+							"confidence": 0.9, 
+							"evidence": "치료 결과도 확실하게 개선됐습니다."
+						},
+						"Clear concise explanation": {
+							"score": 0,
+							"confidence": 0, 
+							"evidence": ""
+						},
+						"Doctor recommendation": {
+							"score": 1,
+							"confidence": 0.7, 
+							"evidence": "저는 앞으로도 김○○ 교수님을 꾸준히 찾아뵐 예정입니다."
+						}
+					}
+				},
+				{
+					"type": "comment",
+					"writer": "다른의견",
+					"doctor": "김ㅎㅈ",
+					"hospital": "세브란스",
+					"Department": "신경외과",
+					"disease": "고지혈증",
+					"evaluation": {
+						"Kindness and consideration": {
+							"score": -1,
+							"confidence": 0.7, 
+							"evidence": "교수님이 친절하긴 했지만, 진료 시간이 짧아 배려를 느끼기는 어려웠습니다."
+						},
+						"Treatment satisfaction": {
+							"score": 0,
+							"confidence": 0.5, 
+							"evidence": "치료 결과는 나아지긴 했지만, 크게 만족스럽진 않았습니다."
+						},
+						"Clear concise explanation": {
+							"score": 0,
+							"confidence": 0.7, 
+							"evidence": "설명도 너무 간단해서..."
+						},
+						"Doctor recommendation": {
+							"score": 0,
+							"confidence": 0.8, 
+							"evidence": "딱히 추천하기에는 조금 고민되는 부분이 있네요."
+						}
+					}
+				}
+			]
+		}
+	}
+	
+]

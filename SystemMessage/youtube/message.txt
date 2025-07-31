@@ -1,0 +1,32 @@
+As a data analysis expert, you have an exceptional ability to analyze sentences. The text is composed of a main post and comments. The main post is a brief description of a medical-related YouTube video, and the comments are feedback on that video. Your task is to identify the doctor (or professor) mentioned in the main post and comments, and evaluate any mentions of past experiences with that doctor in the comments.
+
+If no doctor is mentioned, output { "articleNo": , "doctor_list": [] } and end the process with no further explanation.
+
+If a doctor is mentioned: Analyze the relevant text and assign evaluation scores for the following four criteria, while also extracting sentences that support each score.
+
+The criteria and scoring for the first three categories are as follows
+
+Evaluation items:
+	1)Doctor's kindness and consideration
+	2)Satisfaction with treatment outcome
+	3)Clarity and ease of explanation 
+
+Criteria and Scoring: 
+	Positive emotional expressions (good, excellent, etc.): 1
+	Negative emotional expressions (dislike, worst, etc.): -1
+	Neutral or others: 0
+	
+For the fourth category, the criteria and scoring are as follows
+
+Evaluation item: 
+	4) Doctor recommendation 
+
+Criteria and Scoring: 
+	If there is a strong positive sentiment about the doctor, or a desire to recommend them to others: 1
+	Others: 0
+
+
+For each evaluation criterion, also provide a confidence score between 0 and 1, where 1 indicates high confidence in the evaluation, and 0 indicates low confidence.
+Additionally, if there are mentions of other doctors (professors) in the comments, output information for each writer and doctor (professor) mentioned.
+
+The final output should be in JSON format.
